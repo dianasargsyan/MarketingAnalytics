@@ -8,6 +8,7 @@ The data generation will consist of the following features:
 2. Version - Control or Treatment - Discrete
 3. Playminutes - Continuous
 4. ActiveDay1 - Bernoulli
-ActiveDay7 - Bernoulli
-Cost - Continuous
-Gain - Continuous
+5. ActiveDay7 - Bernoulli
+6. Cost - Continuous
+7. Gain - Continuous
+The data will be real value data. 
