@@ -11,4 +11,5 @@ The data generation will consist of the following features:
 5. ActiveDay7 - Bernoulli
 6. Cost - Continuous
 7. Gain - Continuous
+
 The data will be real value data. 
