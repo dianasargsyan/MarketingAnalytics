@@ -6,7 +6,7 @@ Mock Visualizations - https://www.figma.com/file/20uQAQimTVU8ZvTpKts7yl/Mileston
 
 The data generation will consist of the following features:
 1. User ID - Continuous
-2. Version - Control or Treatment - Discrete
+2. Group - Control or Treatment - Discrete
 3. Playminutes - Continuous
 4. ActiveDay1 - Bernoulli
 5. ActiveDay7 - Bernoulli
