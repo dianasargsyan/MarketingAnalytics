@@ -8,8 +8,8 @@ The data generation will consist of the following features:
 1. User ID - Continuous
 2. Group - Control or Treatment - Discrete
 3. Playminutes - Continuous
-4. ActiveDay1 - Bernoulli
-5. ActiveDay7 - Bernoulli
+4. ActiveDay1 - Continuous
+5. ActiveDay7 - Continuous
 6. Cost - Continuous
 7. Gain - Continuous
 
