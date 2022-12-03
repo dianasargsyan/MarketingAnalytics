@@ -15,6 +15,8 @@ import plotly.express as px
 import plotly.graph_objs as go
 from statsmodels.stats.proportion import proportions_ztest, proportion_confint
 
+import tkinter
+
 
 # external CSS stylesheets
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
