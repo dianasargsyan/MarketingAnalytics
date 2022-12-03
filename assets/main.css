@@ -1,0 +1,85 @@
+#pageWrapper {
+    color: #000000;
+}
+
+#titleFrame {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 109px;
+    left: 0px;
+    top: 0px;
+    min-height: fit-content;
+    background: #034309;
+}
+
+#title {
+    text-align: center;
+    font: 36px/53px 'Hanuman';
+    vertical-align: middle;
+    color: #FFFFFF;
+    position: relative;
+    top: 27.5px;
+}
+
+.subTitle {
+    position: absolute;
+    left: 15px;
+    font: 40px/59px 'Hanuman';
+}
+
+#tabs {
+    position: absolute;
+    width: 800px;
+    height: 67px;
+    top: 180px;
+    left: 25%;
+}
+
+#tabs div:hover {
+    background: #034309;
+    color: #FFFFFF;
+}
+
+#vis-tab, #cross-table-tab, #statistics-tab {
+    position: absolute;
+    top: 200px;
+    width: 80%;
+}
+
+#vis-tab-dropdown, #cross-table-dropdown, #statistics-tab-dropdown {
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    left: 40px;
+}
+
+.Select-value-label {
+    color: #FFFFFF !important;
+    position: relative;
+    top: 6px;
+}
+
+.Select-control {
+    background: #034309;
+    height: 50px;
+    width: 400px;
+}
+
+.Select-menu-outer {
+    width: 400px;
+}
+
+.choose {
+    position: absolute;
+    font: 400 20px/29px 'Hanuman';
+    left: 40px;
+    top: 70px;
+}
+
+.cross-graph, #stat_table {
+    position: absolute;
+    top: 200px;
+    left: 7%;
+    width: 100%;
+}
