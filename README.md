@@ -14,3 +14,5 @@ The data generation will consist of the following features:
 7. Gain - Continuous
 
 The data will be real value data. 
+
+Website link: https://abtestingplatform.up.railway.app/
