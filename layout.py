@@ -18,6 +18,11 @@ from statsmodels.stats.proportion import proportions_ztest, proportion_confint
 
 # external CSS stylesheets
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+
+app=Dash(__name__,
+	external_stylesheets = external_stylesheets, suppress_callback_exceptions=True)
+server=app.server
+
 data = pd.read_csv("test1.csv")
 
 # Barplot for visualizations
@@ -139,11 +144,6 @@ dx = pd.DataFrame()
 dx = pd.DataFrame(zip(list3, list1, list2))
 dx.columns = ['group','day','day7']
 dx.index = data['group'].unique()[1:]
-
-
-app=Dash(__name__,
-	external_stylesheets = external_stylesheets)
-server=app.server
 
 app.layout=html.Div([
 	html.Div([
