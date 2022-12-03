@@ -5,7 +5,7 @@ from urllib.parse import quote as urlquote
 from flask import Flask, send_from_directory
 import dash
 import pandas as pd
-from turtle import width
+#from turtle import width
 import dash_bootstrap_components as dbc
 from dash import dcc, html
 
@@ -15,10 +15,9 @@ import plotly.express as px
 import plotly.graph_objs as go
 from statsmodels.stats.proportion import proportions_ztest, proportion_confint
 
-import _tkinter
-import matplotlib
-matplotlib.use('agg')
-import matplotlib.pyplot as plt 
+# import matplotlib
+# matplotlib.use('agg')
+# import matplotlib.pyplot as plt 
 
 
 # external CSS stylesheets
