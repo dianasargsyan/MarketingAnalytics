@@ -15,7 +15,7 @@ import plotly.express as px
 import plotly.graph_objs as go
 from statsmodels.stats.proportion import proportions_ztest, proportion_confint
 
-import tkinter
+import _tkinter
 import matplotlib
 matplotlib.use('agg')
 import matplotlib.pyplot as plt 
