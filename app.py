@@ -54,7 +54,7 @@ conversionRate7 = px.bar(x=data['group'],
 #Gain for crosstable
 d1 = pd.crosstab(data['group'],data['gain'])
 d1.to_csv("crosstable.csv")
-d1 = pd.read_csv("a.csv")
+d1 = pd.read_csv("crosstable.csv")
 columns = [{'name': col, 'id': col} for col in d1.columns.names]
 
 gain = go.Figure(data=[go.Table(
@@ -68,8 +68,8 @@ gain = go.Figure(data=[go.Table(
 
 #Day (1) for crosstable
 d2 = pd.crosstab(data['group'],data['day'])
-d2.to_csv("a.csv")
-d2 = pd.read_csv("a.csv")
+d2.to_csv("crosstable.csv")
+d2 = pd.read_csv("crosstable.csv")
 columns = [{'name': col, 'id': col} for col in d2.columns.names]
 
 day1 = go.Figure(data=[go.Table(
@@ -83,8 +83,8 @@ day1 = go.Figure(data=[go.Table(
 
 #Day (7) for crosstable
 d3 = pd.crosstab(data['group'],data['day7'])
-d3.to_csv("a.csv")
-d3 = pd.read_csv("a.csv")
+d3.to_csv("crosstable.csv")
+d3 = pd.read_csv("crosstable.csv")
 columns = [{'name': col, 'id': col} for col in d3.columns.names]
 
 day7 = go.Figure(data=[go.Table(
@@ -98,8 +98,8 @@ day7 = go.Figure(data=[go.Table(
 
 #Cost for crosstable
 d4 = pd.crosstab(data['group'],data['cost'])
-d4.to_csv("a.csv")
-d4 = pd.read_csv("a.csv")
+d4.to_csv("crosstable.csv")
+d4 = pd.read_csv("crosstable.csv")
 columns = [{'name': col, 'id': col} for col in d4.columns.names]
 
 cost = go.Figure(data=[go.Table(
