@@ -53,7 +53,7 @@ conversionRate7 = px.bar(x=data['group'],
 
 #Gain for crosstable
 d1 = pd.crosstab(data['group'],data['gain'])
-d1.to_csv("a.csv")
+d1.to_csv("crosstable.csv")
 d1 = pd.read_csv("a.csv")
 columns = [{'name': col, 'id': col} for col in d1.columns.names]
 
@@ -123,8 +123,8 @@ for i in range(len(data['group'].unique())-1):
 	successes = [control_results.sum(), treatment1_results.sum()]
 	nobs = [n_con, n_treat1]
 	z_stat, pval = proportions_ztest(successes, nobs=nobs)
-
 	list1.append(pval)
+
 list2 = []
 for i in range(len(data['group'].unique())-1):
 	control_results = data[data['group'] == 'control']['day7']
@@ -135,15 +135,32 @@ for i in range(len(data['group'].unique())-1):
 	nobs = [n_con, n_treat1]
 	z_stat, pval = proportions_ztest(successes, nobs=nobs)
 	list2.append(pval)
-
+	
 list3 = []
 for i in range(len(data['group'].unique())-1):
 	treatment = f'Treatment group ' + str(i+1)
 	list3.append(treatment)
 
+list4 = []
+for i in range(len(list1)):
+	if i > 0.05:
+		list4.append("Fail to reject: the model did not perform significantly different.")
+	else:
+		list4.append('Reject: there is significant change.')
+
+list5 = []
+for i in range(len(list2)):
+	if i > 0.05:
+		list5.append("Fail to reject: the model did not perform significantly different.")
+	else:
+		list5.append('Reject: there is significant change.')
+
+
+
+
 dx = pd.DataFrame()
-dx = pd.DataFrame(zip(list3, list1, list2))
-dx.columns = ['group','day','day7']
+dx = pd.DataFrame(zip(list3, list1, list4, list2, list5))
+dx.columns = ['group','day', 'hypothesis day', 'day7', 'hypothesis day7']
 dx.index = data['group'].unique()[1:]
 
 app.layout=html.Div([
@@ -181,7 +198,7 @@ def render_content(tab):
     elif tab == 'statistics-tab':
         return html.Div([
 			html.Div([
-				 html.H4('Statistics of the treatment groups'),
+				 html.H4('P-values of each treatment group'),
 			], className = 'choose'),
 			dash_table.DataTable(
 				id='stat_table',
