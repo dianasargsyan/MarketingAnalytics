@@ -123,7 +123,8 @@ for i in range(len(data['group'].unique())-1):
 	successes = [control_results.sum(), treatment1_results.sum()]
 	nobs = [n_con, n_treat1]
 	z_stat, pval = proportions_ztest(successes, nobs=nobs)
-	list1.append(pval)
+	list1.append(round(pval, 4))
+	
 
 list2 = []
 for i in range(len(data['group'].unique())-1):
@@ -134,7 +135,7 @@ for i in range(len(data['group'].unique())-1):
 	successes = [control_results.sum(), treatment1_results.sum()]
 	nobs = [n_con, n_treat1]
 	z_stat, pval = proportions_ztest(successes, nobs=nobs)
-	list2.append(pval)
+	list2.append(round(pval, 4))
 	
 list3 = []
 for i in range(len(data['group'].unique())-1):
